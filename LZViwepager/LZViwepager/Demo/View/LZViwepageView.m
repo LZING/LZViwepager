@@ -22,8 +22,6 @@
 // 得到当前的timer
 @property(nonatomic, weak)NSTimer *timer;
 
-// 时间
-@property(nonatomic, assign)NSInteger secoder;
 @end
 
 @implementation LZViwepageView
@@ -47,7 +45,6 @@
     return self;
 }
 
-
 /**
  *  创建一个图片轮播器的View
  *
@@ -61,7 +58,6 @@
     
     return [[self alloc] initWithFrame:frame WithImageArr:imageArr WithImagePlayerSpace:secoder];
 }
-
 
 #pragma mark - 增加子控件
 // 增加子控件
@@ -88,6 +84,10 @@
     [self addSubview:scrollView];
     self.scrollView = scrollView;
     
+    if (self.imageArr.count == 0) {
+        return;
+    }
+    
     // 先加第一张图片进去
     UIImageView *first = [[UIImageView alloc] initWithFrame:self.bounds];
     first.image = [UIImage imageNamed:[self.imageArr lastObject]];
@@ -96,15 +96,12 @@
     // 如果大于1
     if (self.imageArr.count > 1) {
         
-        // View的宽度
         CGFloat selfWidth = self.frame.size.width;
         CGFloat selfHeight = self.frame.size.height;
         
-        // 创建可变数组
         NSMutableArray *mtbArr = [NSMutableArray array];
         
         for (NSInteger i = 0; i < self.imageArr.count; i ++) {
-            
             // 创建imageView
             UIImageView *imageView = [[UIImageView alloc] init];
             // 设置图片
@@ -114,9 +111,12 @@
             imageView.frame = CGRectMake(imageViewX, 0, selfWidth, selfHeight);
             // 给imageView赋值
             imageView.image = image;
+            // 增加手势
+            imageView.userInteractionEnabled = YES;
+            [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClick:)]];
             // 加到子控件
             [scrollView addSubview:imageView];
-            // 让iamgeView加进去
+            // 让imageView加进去
             [mtbArr addObject:imageView];
         }
         // 给imageViewArr赋值让外界可以访问到
@@ -136,6 +136,9 @@
         // 一开始应该现实第二张图片
         scrollView.contentOffset = CGPointMake(selfWidth, 0);
     }
+    
+    // 占位图片
+    self.placeholder = [UIImage imageNamed:@"XMGInifiteScrollView.bundle/placeholder"];
 }
 
 /**
@@ -157,7 +160,7 @@
     pageController.currentPage = 0;
     // 加入到父控件
     [self addSubview:pageController];
-    // 引住
+    
     self.pageControl = pageController;
 }
 
@@ -170,7 +173,6 @@
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     NSInteger secoder = 1.5;
     if (self.secoder >= 0.5) {
-        
         secoder = self.secoder;
     }
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:secoder target:self selector:@selector(runImage) userInfo:nil repeats:YES];
@@ -179,6 +181,18 @@
     // 得到当前的timer
     self.timer = timer;
 }
+
+#pragma mark - 监听点击
+/**
+ *  图片点击
+ */
+- (void)imageClick:(UITapGestureRecognizer *)tap
+{
+    if ([self.delegate respondsToSelector:@selector(viwepageView:didClickImageAtIndex:)]) {
+        [self.delegate viwepageView:self didClickImageAtIndex:tap.view.tag];
+    }
+}
+
 #pragma mark - action
 /**
  *  图片轮播
@@ -189,29 +203,23 @@
     // 拿到当前的偏移量
     NSInteger index = (self.scrollView.contentOffset.x + 0.5 * width) / width;
     // 得到当前图片的下标
-    [self.scrollView setContentOffset:CGPointMake(width * (index +1), 0) animated:YES];
-    
+    [self.scrollView setContentOffset:CGPointMake(width * (index + 1), 0) animated:YES];
 }
 
 #pragma mark - scrollView代理方法
 /**
  *  只要移动就调用
- *
- *  @param scrollView <#scrollView description#>
  */
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
     // 获得scollView宽度
     CGFloat width = self.scrollView.frame.size.width;
     // 拿到当前的偏移量
     self.index = (self.scrollView.contentOffset.x)/ width;
     // 第一张变到倒数第二张
     if (self.index == 0) {
-        
         // 如果是第0张就让它是第count张
         self.index = self.imageArr.count;
     } else if(self.index == self.imageArr.count + 1) { // 最后一张变为第一张
-        
         // 如果是最后一张就让它是第一张
         self.index = 1;
     }
@@ -222,8 +230,7 @@
 
 /**
  *  全部都移动都结束的时候调用
- // 移动结束的时候调用
- *
+ *  移动结束的时候调用
  */
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
@@ -240,26 +247,23 @@
     }
 }
 
-/**
- *  只有代码才会触发这个方法 代码滚动完毕的时候调用
- */
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     
     [self scrollViewDidEndDecelerating:scrollView];
-    
 }
 
 /**
- *  当我们点击的时候让动画给停掉
+ *  点击时停止时钟
  */
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     
     // 销毁时钟
     [self.timer invalidate];
+    self.timer = nil;
 }
 
 /**
- *  当我们松手的时候开启时钟
+ *  松手时开启时钟
  */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
@@ -280,8 +284,6 @@
 
 /**
  *  页面提示按钮的颜色
- *
- *  @param currentpageColor <#currentpageColor description#>
  */
 - (void)setCurrentpageColor:(UIColor *)currentpageColor {
     
@@ -301,6 +303,7 @@
     
     // 销毁时钟
     [self.timer invalidate];
+    self.timer = nil;
 }
 
 @end
