@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE4F36BB1C9E9DA0004462AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4F36BA1C9E9DA0004462AF /* main.m */; };
+		EE4F36BE1C9E9DA0004462AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4F36BD1C9E9DA0004462AF /* AppDelegate.m */; };
+		EE4F36C61C9E9DA0004462AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4F36C51C9E9DA0004462AF /* Assets.xcassets */; };
+		EE4F36C91C9E9DA0004462AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F36C71C9E9DA0004462AF /* LaunchScreen.storyboard */; };
+		EE4F36D51C9E9EBD004462AF /* LZViwepagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4F36D41C9E9EBD004462AF /* LZViwepagerController.m */; };
+		EE4F36D91C9E9FE6004462AF /* LZViwepageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4F36D81C9E9FE6004462AF /* LZViwepageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE4F36B61C9E9DA0004462AF /* LZViwepager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZViwepager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4F36BA1C9E9DA0004462AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE4F36BC1C9E9DA0004462AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE4F36BD1C9E9DA0004462AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE4F36C51C9E9DA0004462AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE4F36C81C9E9DA0004462AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE4F36CA1C9E9DA0004462AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4F36D31C9E9EBD004462AF /* LZViwepagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZViwepagerController.h; sourceTree = "<group>"; };
+		EE4F36D41C9E9EBD004462AF /* LZViwepagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZViwepagerController.m; sourceTree = "<group>"; };
+		EE4F36D71C9E9FE6004462AF /* LZViwepageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZViwepageView.h; sourceTree = "<group>"; };
+		EE4F36D81C9E9FE6004462AF /* LZViwepageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZViwepageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE4F36B31C9E9DA0004462AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE4F36AD1C9E9DA0004462AF = {
+			isa = PBXGroup;
+			children = (
+				EE4F36B81C9E9DA0004462AF /* LZViwepager */,
+				EE4F36B71C9E9DA0004462AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE4F36B71C9E9DA0004462AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F36B61C9E9DA0004462AF /* LZViwepager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE4F36B81C9E9DA0004462AF /* LZViwepager */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F36D01C9E9E80004462AF /* Demo */,
+				EE4F36BC1C9E9DA0004462AF /* AppDelegate.h */,
+				EE4F36BD1C9E9DA0004462AF /* AppDelegate.m */,
+				EE4F36C51C9E9DA0004462AF /* Assets.xcassets */,
+				EE4F36C71C9E9DA0004462AF /* LaunchScreen.storyboard */,
+				EE4F36CA1C9E9DA0004462AF /* Info.plist */,
+				EE4F36B91C9E9DA0004462AF /* Supporting Files */,
+			);
+			path = LZViwepager;
+			sourceTree = "<group>";
+		};
+		EE4F36B91C9E9DA0004462AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F36BA1C9E9DA0004462AF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE4F36D01C9E9E80004462AF /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F36D21C9E9EA3004462AF /* Controller */,
+				EE4F36D61C9E9FC7004462AF /* View */,
+				EE4F36D11C9E9E80004462AF /* Lib */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		EE4F36D11C9E9E80004462AF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		EE4F36D21C9E9EA3004462AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F36D31C9E9EBD004462AF /* LZViwepagerController.h */,
+				EE4F36D41C9E9EBD004462AF /* LZViwepagerController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EE4F36D61C9E9FC7004462AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F36D71C9E9FE6004462AF /* LZViwepageView.h */,
+				EE4F36D81C9E9FE6004462AF /* LZViwepageView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE4F36B51C9E9DA0004462AF /* LZViwepager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4F36CD1C9E9DA0004462AF /* Build configuration list for PBXNativeTarget "LZViwepager" */;
+			buildPhases = (
+				EE4F36B21C9E9DA0004462AF /* Sources */,
+				EE4F36B31C9E9DA0004462AF /* Frameworks */,
+				EE4F36B41C9E9DA0004462AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LZViwepager;
+			productName = LZViwepager;
+			productReference = EE4F36B61C9E9DA0004462AF /* LZViwepager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE4F36AE1C9E9DA0004462AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = LZING;
+				TargetAttributes = {
+					EE4F36B51C9E9DA0004462AF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = EE4F36B11C9E9DA0004462AF /* Build configuration list for PBXProject "LZViwepager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE4F36AD1C9E9DA0004462AF;
+			productRefGroup = EE4F36B71C9E9DA0004462AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE4F36B51C9E9DA0004462AF /* LZViwepager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE4F36B41C9E9DA0004462AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4F36C91C9E9DA0004462AF /* LaunchScreen.storyboard in Resources */,
+				EE4F36C61C9E9DA0004462AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE4F36B21C9E9DA0004462AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4F36D91C9E9FE6004462AF /* LZViwepageView.m in Sources */,
+				EE4F36BE1C9E9DA0004462AF /* AppDelegate.m in Sources */,
+				EE4F36BB1C9E9DA0004462AF /* main.m in Sources */,
+				EE4F36D51C9E9EBD004462AF /* LZViwepagerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE4F36C71C9E9DA0004462AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4F36C81C9E9DA0004462AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE4F36CB1C9E9DA0004462AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE4F36CC1C9E9DA0004462AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE4F36CE1C9E9DA0004462AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZViwepager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LZING.LZViwepager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EE4F36CF1C9E9DA0004462AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LZViwepager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LZING.LZViwepager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE4F36B11C9E9DA0004462AF /* Build configuration list for PBXProject "LZViwepager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4F36CB1C9E9DA0004462AF /* Debug */,
+				EE4F36CC1C9E9DA0004462AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4F36CD1C9E9DA0004462AF /* Build configuration list for PBXNativeTarget "LZViwepager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4F36CE1C9E9DA0004462AF /* Debug */,
+				EE4F36CF1C9E9DA0004462AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE4F36AE1C9E9DA0004462AF /* Project object */;
+}
